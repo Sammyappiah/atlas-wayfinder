@@ -50,7 +50,7 @@ const navLinks = [
         fontSize: "0.9rem",
       }}
     >
-      Atlas Finder
+      Atlas Wayfinder
     </div>
 
     <div
