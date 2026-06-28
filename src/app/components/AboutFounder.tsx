@@ -4,7 +4,7 @@ const FOUNDER_IMG =
   "https://images.unsplash.com/photo-1680001370835-14091dcc05f3?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=800&h=1000&auto=format";
 
 const credentials = [
-  { label: "Qualification", value: "British Educator" },
+  { label: "Qualification", value: "Founder & Director" },
   { label: "Specialisation", value: "Specialist Learning Support" },
   { label: "Background", value: "Therapist & Counsellor" },
   { label: "Language", value: "Native British English" },
@@ -62,7 +62,7 @@ export function AboutFounder() {
                 <div style={{ aspectRatio: "4/5", overflow: "hidden" }}>
                   <img
                     src={FOUNDER_IMG}
-                    alt="Sammy — Founder of Atlas English"
+                    alt="Founder of Atlas Wayfinder"
                     className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                   />
                   <div

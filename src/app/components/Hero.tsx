@@ -264,7 +264,7 @@ export function Hero() {
               <div className="overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 <img
                   src={HERO_IMAGE}
-                  alt="Sammy — British Educator and English Coach"
+                  alt="Sammy — Founder & Director and English Coach"
                   className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                 />
                 {/* Gradient overlay */}
@@ -302,7 +302,7 @@ export function Hero() {
                   className="text-xs mt-0.5"
                   style={{ color: "rgba(250,247,240,0.6)" }}
                 >
-                  British Educator · Native English Speaker
+                  Founder & Director · Native English Speaker
                 </div>
               </div>
 
