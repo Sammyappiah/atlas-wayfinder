@@ -4,37 +4,36 @@ import { motion, AnimatePresence } from "motion/react";
 
 const faqs = [
   {
-    q: "Who is Atlas Wayfinder
-                designed for?",
-    a: "Atlas Wayfinder
-               works with ambitious students aged 14+ and professionals who need to reach a high standard of English for international study, university admission, IELTS examinations or career advancement. Our clients come from all over the world and are united by one thing: a serious commitment to their goals.",
+    q: "Who does Atlas Wayfinder work with?",
+    a: "We serve international students and professionals preparing to study, work or relocate abroad, with tailored support for each individual pathway.",
   },
   {
-    q: "How are sessions delivered?",
-    a: "All sessions are delivered online via Zoom, Google Meet or Microsoft Teams — wherever you are in the world. Sessions are live, one-to-one (or group for corporate clients) and scheduled flexibly around your time zone.",
+    q: "How do I know which programme is right for me?",
+    a: "We start with an assessment and consultation to match your current readiness, goals and timeline, then recommend the most effective programme.",
   },
   {
-    q: "How long does it take to achieve my target IELTS band score?",
-    a: "This depends on your current level and your target score. Most students see significant improvement within 6–12 weeks of focused coaching. Following your free IELTS assessment, Sammy will give you a realistic timeline tailored to your situation.",
+    q: "Do I need IELTS before studying abroad?",
+    a: "IELTS is required by many destinations, and we can assess whether it is needed for your chosen pathway and prepare you accordingly.",
   },
   {
-    q: "What makes Atlas Wayfinder
-               different from other IELTS courses?",
-    a: "Atlas Wayfinder
-               is not a one size fits all course. Every programme is bespoke, built around your specific weaknesses, learning style and goals. Sammy's background in specialist learning support and therapy means she can identify and address the root causes of language barriers, not just their symptoms.",
+    q: "Can you help if English is not my first language?",
+    a: "Yes. Our approach strengthens English for global study and work, with clear structure and support for multilingual learners.",
   },
   {
-    q: "Do you offer corporate English training for teams?",
-    a: "Yes. We offer bespoke corporate training programmes for international teams and businesses of any size. These can be delivered as group sessions, individual coaching for senior professionals, or a combination of both. Please contact us to discuss your organisation's requirements.",
+    q: "Do you support professionals as well as students?",
+    a: "Yes. We work with both students and professionals to improve communication, presentations and confidence in international environments.",
   },
   {
-    q: "What is your cancellation policy?",
-    a: "We require 24 hours' notice to reschedule or cancel a session. Sessions cancelled with less than 24 hours' notice may be charged. We understand that life happens, and we will always work with you wherever possible.",
+    q: "Do you work with learners who have dyslexia, ADHD or other learning differences?",
+    a: "Yes. We provide evidence-based learning strategies and supportive guidance for learners with dyslexia, ADHD and other differences.",
+  },
+  {
+    q: "How do online sessions work?",
+    a: "Sessions are live, secure and scheduled to suit your time zone, combining expert coaching, feedback and practical work in a professional format.",
   },
   {
     q: "How do I get started?",
-    a: "The first step is a free consultation or assessment. Simply fill in the contact form below or send a WhatsApp message and Sammy will get back to you within 24 hours to discuss your goals and how Atlas Wayfinder
-                can help.",
+    a: "Begin with a consultation or assessment so we can clarify your current position and agree the most effective next step.",
   },
 ];
 
@@ -78,15 +77,14 @@ export function FAQ() {
               className="mt-6 leading-relaxed text-sm"
               style={{ color: "rgba(250, 247, 240, 0.55)" }}
             >
-              Can't find what you're looking for? Send us a message and we'll
-              respond within 24 hours.
+              If you need more clarity, book a consultation and we will review your goals together.
             </p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 mt-6 text-xs uppercase tracking-widest transition-colors duration-200"
               style={{ color: "#C8A55A", letterSpacing: "0.15em", fontWeight: 600 }}
             >
-              Ask a Question
+              Book a Consultation
               <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
                 <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
