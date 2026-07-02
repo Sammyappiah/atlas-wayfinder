@@ -75,9 +75,9 @@ export function Services() {
                 color: "#0F172A",
               }}
             >
-              Premium
+              International Programmes
               <br />
-              <em>International Programmes</em>
+              <em>designed for study, work and relocation</em>
             </h2>
           </div>
           <p
@@ -199,7 +199,7 @@ export function Services() {
                     fontWeight: 600,
                   }}
                 >
-                  Enquire
+                  Start Your Global Plan
                   <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M2 6h8M7 3l3 3-3 3"

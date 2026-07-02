@@ -101,7 +101,7 @@ export function Navigation() {
                   "#C8A55A";
               }}
             >
-              Book Free Consultation
+              Start Your Global Plan
             </a>
           </div>
 
@@ -153,7 +153,7 @@ export function Navigation() {
               }}
               onClick={() => setMobileOpen(false)}
             >
-              Book Free Consultation
+              Start Your Global Plan
             </a>
           </div>
         )}

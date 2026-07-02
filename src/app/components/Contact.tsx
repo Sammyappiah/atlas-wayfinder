@@ -164,7 +164,7 @@ export function Contact() {
                   >
                     Email
                   </div>
-                    <div
+                  <div
                       className="text-sm group-hover:text-white transition-colors"
                       style={{ color: "#0F172A", fontWeight: 500 }}
                     >

@@ -154,9 +154,9 @@ export function AboutFounder() {
                 fontWeight: 400,
               }}
             >
-              Sammy is a British educator, therapist and Specialist Learning
-              Practitioner who advises students and professionals on international
-              study, career mobility and relocation.
+              Sammy combines British teaching expertise with specialist learning
+              practice to guide students and professionals toward international
+              study, career mobility and confident relocation.
             </p>
 
             <div
@@ -164,15 +164,14 @@ export function AboutFounder() {
               style={{ color: "rgba(250, 247, 240, 0.65)", fontSize: "1.0625rem", fontWeight: 400 }}
             >
               <p>
-                Atlas Wayfinder helps clients to:
+                We help clients to:
               </p>
               <ul className="grid gap-2 pl-5 list-disc">
-                <li>Study abroad with clear academic pathways</li>
-                <li>Pass IELTS with strategic preparation</li>
-                <li>Improve professional English for global work</li>
-                <li>Access universities and academic placements</li>
-                <li>Build international careers with confidence</li>
-                <li>Relocate with clarity and practical guidance</li>
+                <li>Clarify pathways to study abroad</li>
+                <li>Plan and achieve required IELTS outcomes</li>
+                <li>Develop professional English for global work</li>
+                <li>Prepare for university applications and interviews</li>
+                <li>Build confidence for international careers</li>
               </ul>
             </div>
 
@@ -232,7 +231,7 @@ export function AboutFounder() {
                   "rgba(200, 165, 90, 0.5)";
               }}
             >
-              Book a Consultation
+              Start Your Global Plan
               <svg
                 className="w-4 h-4"
                 viewBox="0 0 16 16"

@@ -77,14 +77,14 @@ export function FAQ() {
               className="mt-6 leading-relaxed text-sm"
               style={{ color: "rgba(250, 247, 240, 0.55)" }}
             >
-              If you need more clarity, book a consultation and we will review your goals together.
+              If you'd like personalised guidance, start your strategic consultation.
             </p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 mt-6 text-xs uppercase tracking-widest transition-colors duration-200"
               style={{ color: "#C8A55A", letterSpacing: "0.15em", fontWeight: 600 }}
             >
-              Book a Consultation
+              Start Your Global Plan
               <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
                 <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

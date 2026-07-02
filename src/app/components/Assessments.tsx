@@ -71,7 +71,7 @@ export function Assessments() {
               className="text-xs uppercase tracking-[0.22em]"
               style={{ color: "#C8A55A" }}
             >
-              Assessment First
+                Assessment First
             </span>
             <div className="w-10 h-px" style={{ backgroundColor: "#C8A55A" }} />
           </div>
@@ -84,8 +84,12 @@ export function Assessments() {
           >
             Choose the right pathway
             <br />
-            <em>by understanding your current position</em>
+              <em>start with an assessment</em>
           </h2>
+            cta: "Start Assessment",
+            cta: "Start Assessment",
+            cta: "Start Assessment",
+            cta: "Start Assessment",
           <p
             className="mt-4 leading-relaxed"
             style={{ color: "rgba(250, 247, 240, 0.6)", fontSize: "1.0625rem" }}
