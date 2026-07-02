@@ -3,44 +3,44 @@ import { motion } from "motion/react";
 const services = [
   {
     title: "IELTS Preparation",
-    subtitle: "Band 6.5 – 8.5",
+    subtitle: "Score attainment",
     description:
-      "Structured coaching across all four IELTS components with targeted exam strategy, timed practice and personalised feedback from a specialist coach.",
+      "Helping students achieve the scores required for university, work and migration.",
     tag: "Most Popular",
   },
   {
-    title: "Academic English",
-    subtitle: "University Level",
+    title: "English for Professionals",
+    subtitle: "Career fluency",
     description:
-      "Essay writing, critical analysis, research skills and academic register for students preparing to study at British and international universities.",
+      "Advanced English coaching for interviews, presentations, workplace communication and career progression.",
     tag: null,
   },
   {
     title: "University Preparation",
-    subtitle: "Admissions Support",
+    subtitle: "Academic readiness",
     description:
-      "Personal statement coaching, interview preparation and English language development tailored to specific university admission requirements.",
+      "Support with applications, academic English, interviews and confidence before studying abroad.",
     tag: null,
   },
   {
-    title: "Professional English",
-    subtitle: "Career Development",
+    title: "Study Abroad Guidance",
+    subtitle: "Global entry",
     description:
-      "Business writing, presentation skills, email communication and workplace English for professionals in international environments.",
+      "Helping students prepare linguistically and academically for international education.",
     tag: null,
   },
   {
-    title: "Corporate Training",
-    subtitle: "Team & Group",
+    title: "Specialist Learning Support",
+    subtitle: "Structured strategies",
     description:
-      "Bespoke English training programmes for international teams and businesses — delivered online or in-house across time zones worldwide.",
+      "Evidence-based support for learners with dyslexia, ADHD and other learning differences.",
     tag: null,
   },
   {
-    title: "Interview Preparation",
-    subtitle: "Job & University",
+    title: "International Coaching",
+    subtitle: "Mobility planning",
     description:
-      "Mock interviews, spoken English coaching and confidence-building for high-stakes university and professional interview situations.",
+      "Personalised coaching for people planning to study, work or relocate abroad.",
     tag: null,
   },
 ];
@@ -75,17 +75,17 @@ export function Services() {
                 color: "#0F172A",
               }}
             >
-              Premium English
+              Premium
               <br />
-              <em>Programmes</em>
+              <em>International Programmes</em>
             </h2>
           </div>
           <p
             className="max-w-sm leading-relaxed text-sm"
             style={{ color: "#6B7280", fontWeight: 400 }}
           >
-            Every programme is tailored to the individual student or
-            professional, delivered online and available worldwide.
+            Each service is designed for students and professionals preparing to
+            study, work and relocate abroad.
           </p>
         </div>
 
@@ -213,6 +213,28 @@ export function Services() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p
+            className="max-w-2xl leading-relaxed text-sm"
+            style={{ color: "#6B7280", fontWeight: 400 }}
+          >
+            Discuss your international goals with our team and explore the pathway
+            that suits your study, work or relocation plans.
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-widest transition-all duration-300"
+            style={{
+              backgroundColor: "#C8A55A",
+              color: "#0F172A",
+              letterSpacing: "0.12em",
+              fontWeight: 600,
+            }}
+          >
+            Discuss your international goals
+          </a>
         </div>
       </div>
     </section>
