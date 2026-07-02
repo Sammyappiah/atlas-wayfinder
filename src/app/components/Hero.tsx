@@ -7,10 +7,15 @@ const CAMBRIDGE_IMG =
   "/images/placeholder.jpg";
 
 const trustIndicators = [
-  "Native British English",
-  "Online Worldwide",
-  "IELTS Coaching",
-  "University Preparation",
+
+  "Study Abroad",
+
+  "Career Development",
+
+  "IELTS Success",
+
+  "British Coaching",
+
 ];
 
 export function Hero() {
@@ -60,7 +65,7 @@ export function Hero() {
                 className="text-xs uppercase tracking-[0.25em]"
                 style={{ color: "#C8A55A" }}
               >
-                British-Led English Coaching
+                Study • Work • Explore Abroad
               </span>
             </div>
 
@@ -73,13 +78,13 @@ export function Hero() {
                 fontSize: "clamp(3rem, 5.5vw, 5.5rem)",
               }}
             >
-              English That Opens
+              Navigate international study,
+              <br />
+              work and travel
               <br />
               <em style={{ color: "#C8A55A", fontStyle: "italic" }}>
-                International
+                with British guidance
               </em>
-              <br />
-              Doors
             </h1>
 
             <p
@@ -92,9 +97,9 @@ export function Hero() {
                 fontWeight: 400,
               }}
             >
-              British-led English coaching helping ambitious students and
-              professionals access international education, career advancement
-              and global opportunities.
+              Atlas Wayfinder helps students and professionals study, work and
+              explore abroad through English, combining British coaching,
+              IELTS success planning and personalised international support.
             </p>
 
             {/* CTAs */}
@@ -117,7 +122,7 @@ export function Hero() {
                     "#C8A55A";
                 }}
               >
-                Book Free Consultation
+                Plan Your Global Path
               </a>
               <a
                 href="#assessments"
@@ -138,7 +143,7 @@ export function Hero() {
                   (e.currentTarget as HTMLElement).style.color = "#FAF7F0";
                 }}
               >
-                Take Free Assessment
+                Secure IELTS Success
               </a>
             </div>
 
@@ -302,7 +307,7 @@ export function Hero() {
                   className="text-xs mt-0.5"
                   style={{ color: "rgba(250,247,240,0.6)" }}
                 >
-                  Founder & Director · Native English Speaker
+                 British Educator • Therapist • International Learning Specialist
                 </div>
               </div>
 
@@ -332,7 +337,7 @@ export function Hero() {
           className="text-xs uppercase tracking-widest"
           style={{ color: "rgba(200, 165, 90, 0.5)", letterSpacing: "0.2em" }}
         >
-          Discover
+          Explore
         </span>
         <div
           className="w-px h-12"
