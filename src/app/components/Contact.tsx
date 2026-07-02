@@ -120,8 +120,8 @@ export function Contact() {
                     className="text-xs uppercase tracking-widest mb-1 group-hover:text-amber-400 transition-colors"
                     style={{ color: "#C8A55A", letterSpacing: "0.15em" }}
                   >
-                    Direct consultant access
-                  </div>
+                      Direct consultant access
+                    </div>
                   <div
                     className="text-sm group-hover:text-white transition-colors"
                     style={{ color: "#0F172A", fontWeight: 500 }}
@@ -164,12 +164,12 @@ export function Contact() {
                   >
                     Email
                   </div>
-                  <div
-                    className="text-sm group-hover:text-white transition-colors"
-                    style={{ color: "#0F172A", fontWeight: 500 }}
-                  >
-                    {SITE.email}
-                  </div>
+                    <div
+                      className="text-sm group-hover:text-white transition-colors"
+                      style={{ color: "#0F172A", fontWeight: 500 }}
+                    >
+                      {SITE.email}
+                    </div>
                 </div>
               </a>
 

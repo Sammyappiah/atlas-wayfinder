@@ -114,12 +114,10 @@ export function Hero() {
                   fontWeight: 600,
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.backgroundColor =
-                    "#D4B472";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "#D4B472";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.backgroundColor =
-                    "#C8A55A";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "#C8A55A";
                 }}
               >
                 Plan Your Global Path
@@ -138,8 +136,7 @@ export function Hero() {
                   (e.currentTarget as HTMLElement).style.color = "#C8A55A";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor =
-                    "rgba(200, 165, 90, 0.5)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(200, 165, 90, 0.5)";
                   (e.currentTarget as HTMLElement).style.color = "#FAF7F0";
                 }}
               >
