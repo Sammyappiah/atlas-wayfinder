@@ -7,15 +7,10 @@ const CAMBRIDGE_IMG =
   "/images/placeholder.jpg";
 
 const trustIndicators = [
-
-  "Study Abroad",
-
-  "Career Development",
-
+  "British Education Specialists",
   "IELTS Success",
-
-  "British Coaching",
-
+  "University Preparation",
+  "Global Opportunities",
 ];
 
 export function Hero() {
@@ -73,37 +68,31 @@ export function Hero() {
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 fontWeight: 400,
-                lineHeight: 1.08,
+                lineHeight: 1.02,
                 color: "#FAF7F0",
-                fontSize: "clamp(3rem, 5.5vw, 5.5rem)",
+                fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
               }}
             >
-              Navigate international study,
+              Your International Journey
               <br />
-              work and travel
-              <br />
-              <em style={{ color: "#C8A55A", fontStyle: "italic" }}>
-                with British guidance
-              </em>
+              Starts Here
             </h1>
 
             <p
               className="mt-8 mb-10 leading-relaxed"
               style={{
-                color: "rgba(250, 247, 240, 0.65)",
+                color: "rgba(250, 247, 240, 0.72)",
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontSize: "1.0625rem",
-                maxWidth: "480px",
+                maxWidth: "560px",
                 fontWeight: 400,
               }}
             >
-              Atlas Wayfinder helps students and professionals study, work and
-              explore abroad through English, combining British coaching,
-              IELTS success planning and personalised international support.
+              Atlas Wayfinder helps students and professionals unlock international opportunities through expert English coaching, IELTS preparation, university guidance and personalised learning pathways.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-14">
               <a
                 href="#contact"
                 className="px-8 py-4 text-sm uppercase tracking-widest text-center transition-all duration-300 group"
@@ -120,10 +109,10 @@ export function Hero() {
                   (e.currentTarget as HTMLElement).style.backgroundColor = "#C8A55A";
                 }}
               >
-                Plan Your Global Path
+                Book Free Consultation
               </a>
               <a
-                href="#assessments"
+                href="#services"
                 className="px-8 py-4 text-sm uppercase tracking-widest text-center transition-all duration-300"
                 style={{
                   border: "1px solid rgba(200, 165, 90, 0.5)",
@@ -140,34 +129,34 @@ export function Hero() {
                   (e.currentTarget as HTMLElement).style.color = "#FAF7F0";
                 }}
               >
-                Secure IELTS Success
+                Explore Services
               </a>
             </div>
 
             {/* Trust indicators */}
             <div
               className="pt-8 border-t"
-              style={{ borderColor: "rgba(200, 165, 90, 0.15)" }}
+              style={{ borderColor: "rgba(200, 165, 90, 0.12)" }}
             >
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {trustIndicators.map((item) => (
-                  <div key={item} className="flex items-center gap-2.5">
+                  <div key={item} className="flex items-center gap-3">
                     <div
-                      className="w-4 h-4 flex items-center justify-center flex-shrink-0 rounded-full"
+                      className="w-5 h-5 flex items-center justify-center flex-shrink-0 rounded-full"
                       style={{
-                        backgroundColor: "rgba(200, 165, 90, 0.15)",
-                        border: "1px solid rgba(200, 165, 90, 0.4)",
+                        backgroundColor: "rgba(200, 165, 90, 0.12)",
+                        border: "1px solid rgba(200, 165, 90, 0.35)",
                       }}
                     >
                       <svg
-                        className="w-2.5 h-2.5"
+                        className="w-3 h-3"
                         viewBox="0 0 10 10"
                         fill="none"
                       >
                         <path
                           d="M2 5l2 2 4-4"
                           stroke="#C8A55A"
-                          strokeWidth="1.5"
+                          strokeWidth="1.4"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
@@ -176,8 +165,8 @@ export function Hero() {
                     <span
                       className="text-sm"
                       style={{
-                        color: "rgba(250, 247, 240, 0.7)",
-                        fontWeight: 400,
+                        color: "rgba(250, 247, 240, 0.78)",
+                        fontWeight: 500,
                       }}
                     >
                       {item}
@@ -197,132 +186,18 @@ export function Hero() {
               delay: 0.2,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:flex items-center justify-center"
           >
-            {/* Globe decorative SVG */}
-            <div
-              className="absolute -top-8 -right-8 w-64 h-64 opacity-10"
-              style={{ zIndex: 0 }}
-            >
+            {/* Globe decorative SVG — larger and centred for consultancy feel */}
+            <div className="w-96 h-96 opacity-12" style={{ zIndex: 0 }}>
               <svg viewBox="0 0 200 200" fill="none">
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="90"
-                  stroke="#C8A55A"
-                  strokeWidth="1"
-                />
-                <ellipse
-                  cx="100"
-                  cy="100"
-                  rx="55"
-                  ry="90"
-                  stroke="#C8A55A"
-                  strokeWidth="0.8"
-                />
-                <ellipse
-                  cx="100"
-                  cy="100"
-                  rx="90"
-                  ry="30"
-                  stroke="#C8A55A"
-                  strokeWidth="0.8"
-                />
-                <ellipse
-                  cx="100"
-                  cy="100"
-                  rx="90"
-                  ry="55"
-                  stroke="#C8A55A"
-                  strokeWidth="0.5"
-                />
-                <line
-                  x1="10"
-                  y1="100"
-                  x2="190"
-                  y2="100"
-                  stroke="#C8A55A"
-                  strokeWidth="0.5"
-                />
-                <line
-                  x1="100"
-                  y1="10"
-                  x2="100"
-                  y2="190"
-                  stroke="#C8A55A"
-                  strokeWidth="0.5"
-                />
+                <circle cx="100" cy="100" r="90" stroke="#C8A55A" strokeWidth="1" />
+                <ellipse cx="100" cy="100" rx="55" ry="90" stroke="#C8A55A" strokeWidth="0.8" />
+                <ellipse cx="100" cy="100" rx="90" ry="30" stroke="#C8A55A" strokeWidth="0.8" />
+                <ellipse cx="100" cy="100" rx="90" ry="55" stroke="#C8A55A" strokeWidth="0.5" />
+                <line x1="10" y1="100" x2="190" y2="100" stroke="#C8A55A" strokeWidth="0.5" />
+                <line x1="100" y1="10" x2="100" y2="190" stroke="#C8A55A" strokeWidth="0.5" />
               </svg>
-            </div>
-
-            {/* Photo frame */}
-            <div
-              className="relative"
-              style={{
-                border: "1px solid rgba(200, 165, 90, 0.25)",
-                padding: "12px",
-              }}
-            >
-              <div className="overflow-hidden" style={{ aspectRatio: "4/5" }}>
-                <img
-                  src={HERO_IMAGE}
-                  alt="Sammy — Founder & Director and English Coach"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                />
-                {/* Gradient overlay */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(15,23,42,0.5) 0%, transparent 50%)",
-                  }}
-                />
-              </div>
-
-              {/* Caption card */}
-              <div
-                className="absolute bottom-6 left-6 right-6 p-4"
-                style={{ backgroundColor: "rgba(15, 23, 42, 0.92)" }}
-              >
-                <div
-                  className="text-xs uppercase tracking-widest mb-1"
-                  style={{ color: "#C8A55A", letterSpacing: "0.18em" }}
-                >
-                  Your Coach
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    color: "#FAF7F0",
-                    fontSize: "1.25rem",
-                    fontWeight: 400,
-                  }}
-                >
-                  Sammy
-                </div>
-                <div
-                  className="text-xs mt-0.5"
-                  style={{ color: "rgba(250,247,240,0.6)" }}
-                >
-                 British Educator • Therapist • International Learning Specialist
-                </div>
-              </div>
-
-              {/* Corner accent */}
-              <div
-                className="absolute top-3 right-3 w-6 h-6"
-                style={{
-                  borderTop: "2px solid #C8A55A",
-                  borderRight: "2px solid #C8A55A",
-                }}
-              />
-              <div
-                className="absolute bottom-3 left-3 w-6 h-6"
-                style={{
-                  borderBottom: "2px solid #C8A55A",
-                  borderLeft: "2px solid #C8A55A",
-                }}
-              />
             </div>
           </motion.div>
         </div>
