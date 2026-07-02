@@ -2,14 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../../assets/logo.png";
 
-const navLinks = [
-  "Home",
-  "Services",
-  "About",
-  "Assessments",
-  "FAQ",
-  "Contact",
-];
+const navLinks = ["Home", "About", "Services"];
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,28 +22,22 @@ export function Navigation() {
       const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: "smooth" });
 
-      // after scrolling starts, move focus to the section for keyboard users
-      // set a short timeout to allow smooth scroll to begin
       setTimeout(() => {
         try {
           el.setAttribute("tabindex", "-1");
           el.focus({ preventScroll: true } as any);
-          // apply a temporary focus outline
-          const prevOutline = el.style.outline;
           const prevBoxShadow = el.style.boxShadow;
           el.style.boxShadow = "0 0 0 4px rgba(200,165,90,0.12)";
           setTimeout(() => {
             el.style.boxShadow = prevBoxShadow || "";
-            if (prevOutline) el.style.outline = prevOutline;
           }, 900);
         } catch (err) {
-          /* ignore focus errors */
+          /* ignore */
         }
       }, 380);
     };
 
     if (mobileOpen) {
-      // close menu first, then scroll after transition
       setMobileOpen(false);
       setTimeout(() => doScroll(), 240);
     } else {
@@ -64,7 +51,6 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Manage mount/unmount for menu to allow transition out
   useEffect(() => {
     if (mobileOpen) setMenuVisible(true);
     else {
@@ -73,7 +59,6 @@ export function Navigation() {
     }
   }, [mobileOpen]);
 
-  // Lock body scroll when mobile menu is open and restore when closed
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
@@ -85,9 +70,8 @@ export function Navigation() {
     };
   }, [mobileOpen]);
 
-  // Update active nav item on scroll
   useEffect(() => {
-    const ids = ["home", "services", "about", "assessments", "faq", "contact"];
+    const ids = ["home", "about", "services"];
     const handler = () => {
       const nav = document.querySelector("nav");
       const offset = (nav?.clientHeight ?? 80) + 16;
@@ -156,13 +140,8 @@ export function Navigation() {
                       color: active === link.toLowerCase() ? "#C8A55A" : "rgba(250, 247, 240, 0.75)",
                       fontWeight: active === link.toLowerCase() ? 700 : 500,
                     }}
-                    onMouseEnter={(e) =>
-                      ((e.target as HTMLElement).style.color = "#C8A55A")
-                    }
-                    onMouseLeave={(e) =>
-                      ((e.target as HTMLElement).style.color =
-                        active === link.toLowerCase() ? "#C8A55A" : "rgba(250, 247, 240, 0.75)")
-                    }
+                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#C8A55A")}
+                    onMouseLeave={(e) => ((e.target as HTMLElement).style.color = active === link.toLowerCase() ? "#C8A55A" : "rgba(250, 247, 240, 0.75)")}
                     onClick={(e) => handleNavClick(e, `#${link.toLowerCase()}`)}
                   >
                     {link}
@@ -170,38 +149,34 @@ export function Navigation() {
                 </li>
               ))}
             </ul>
-            <a
-              href="#contact"
-              className="px-6 py-2.5 text-sm uppercase tracking-widest transition-all duration-300"
-              style={{
-                backgroundColor: "#C8A55A",
-                color: "#0F172A",
-                letterSpacing: "0.12em",
-                fontWeight: 600,
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor =
-                  "#D4B472";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor =
-                  "#C8A55A";
-              }}
-            >
-              Start Your Global Plan
-            </a>
           </div>
 
-          <button
-            type="button"
-            className="lg:hidden p-2"
-            style={{ color: "#FAF7F0" }}
-            onClick={() => setMobileOpen((open) => !open)}
-            aria-label="Toggle navigation menu"
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
+          <a
+            href="#contact"
+            className="px-6 py-2.5 text-sm uppercase tracking-widest transition-all duration-300"
+            style={{
+              backgroundColor: "#C8A55A",
+              color: "#0F172A",
+              letterSpacing: "0.12em",
+              fontWeight: 600,
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.backgroundColor = "#D4B472";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.backgroundColor = "#C8A55A";
+            }}
+            onClick={(e) => handleNavClick(e, "#contact")}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            Start Your Global Plan
+          </a>
+
+          <button
+            className="lg:hidden p-2 ml-4"
+            aria-label="Toggle menu"
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            {mobileOpen ? <X color="#FAF7F0" /> : <Menu color="#FAF7F0" />}
           </button>
         </div>
 
@@ -237,7 +212,10 @@ export function Navigation() {
                       paddingLeft: 12,
                       paddingRight: 12,
                     }}
-                    onClick={(e) => handleNavClick(e, `#${link.toLowerCase()}`)}
+                    onClick={(e) => {
+                      setMobileOpen(false);
+                      handleNavClick(e, `#${link.toLowerCase()}`);
+                    }}
                   >
                     {link}
                   </a>
@@ -254,7 +232,10 @@ export function Navigation() {
                   letterSpacing: "0.12em",
                   fontWeight: 600,
                 }}
-                onClick={(e) => handleNavClick(e, "#contact")}
+                onClick={(e) => {
+                  setMobileOpen(false);
+                  handleNavClick(e, "#contact");
+                }}
               >
                 Start Your Global Plan
               </a>
