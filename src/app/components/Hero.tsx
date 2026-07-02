@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1741241290790-0b69e17888da?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=900&h=1100&auto=format";
+  "/images/placeholder.jpg";
 
 const CAMBRIDGE_IMG =
-  "https://images.unsplash.com/20/cambridge.JPG?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=1400&h=900&auto=format";
+  "/images/placeholder.jpg";
 
 const trustIndicators = [
   "Native British English",

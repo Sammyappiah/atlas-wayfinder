@@ -124,6 +124,7 @@ export function Footer() {
                 }}
               >
                 Atlas Wayfinder
+              
               </span>
             </div>
             <p
@@ -244,7 +245,7 @@ export function Footer() {
                 +44 7947 629 518
               </a>
               <a
-                href="mailto:sammy@appiahcounselling.com"
+                href="mailto:hello@atlaswayfinder.com"
                 className="text-sm transition-colors duration-200 break-all"
                 style={{ color: "rgba(250, 247, 240, 0.5)" }}
                 onMouseEnter={(e) =>
@@ -255,7 +256,7 @@ export function Footer() {
                     "rgba(250, 247, 240, 0.5)")
                 }
               >
-                sammy@appiahcounselling.com
+                hello@atlaswayfinder.com
               </a>
               <div
                 className="text-xs"
@@ -276,7 +277,8 @@ export function Footer() {
             className="text-xs"
             style={{ color: "rgba(250, 247, 240, 0.3)" }}
           >
-            © {new Date().getFullYear()} Atlas Wayfinder. All rights reserved.
+            © {new Date().getFullYear()} Atlas Wayfinder
+              . All rights reserved.
           </div>
           <div className="flex gap-5">
             {["Privacy Policy", "Terms of Service"].map((l) => (

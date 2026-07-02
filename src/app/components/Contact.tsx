@@ -133,7 +133,7 @@ export function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:sammy@appiahcounselling.com"
+                href="mailto:hello@atlaswayfinder.com"
                 className="group flex items-center gap-5 p-5 transition-all duration-300"
                 style={{
                   border: "1px solid rgba(15, 23, 42, 0.1)",
@@ -168,7 +168,7 @@ export function Contact() {
                     className="text-sm group-hover:text-white transition-colors"
                     style={{ color: "#0F172A", fontWeight: 500 }}
                   >
-                    sammy@appiahcounselling.com
+                    hello@atlaswayfinder.com
                   </div>
                 </div>
               </a>

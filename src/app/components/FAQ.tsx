@@ -4,8 +4,10 @@ import { motion, AnimatePresence } from "motion/react";
 
 const faqs = [
   {
-    q: "Who is Atlas Wayfinder  designed for?",
-    a: "Atlas Wayfinder works with ambitious students aged 14+ and professionals who need to reach a high standard of English for international study, university admission, IELTS examinations or career advancement. Our clients come from all over the world and are united by one thing: a serious commitment to their goals.",
+    q: "Who is Atlas Wayfinder
+                designed for?",
+    a: "Atlas Wayfinder
+               works with ambitious students aged 14+ and professionals who need to reach a high standard of English for international study, university admission, IELTS examinations or career advancement. Our clients come from all over the world and are united by one thing: a serious commitment to their goals.",
   },
   {
     q: "How are sessions delivered?",
@@ -16,8 +18,10 @@ const faqs = [
     a: "This depends on your current level and your target score. Most students see significant improvement within 6–12 weeks of focused coaching. Following your free IELTS assessment, Sammy will give you a realistic timeline tailored to your situation.",
   },
   {
-    q: "What makes Atlas Wayfinder different from other IELTS courses?",
-    a: "Atlas Wayfinder is not a one size fits all course. Every programme is bespoke, built around your specific weaknesses, learning style and goals. Sammy's background in specialist learning support and therapy means she can identify and address the root causes of language barriers, not just their symptoms.",
+    q: "What makes Atlas Wayfinder
+               different from other IELTS courses?",
+    a: "Atlas Wayfinder
+               is not a one size fits all course. Every programme is bespoke, built around your specific weaknesses, learning style and goals. Sammy's background in specialist learning support and therapy means she can identify and address the root causes of language barriers, not just their symptoms.",
   },
   {
     q: "Do you offer corporate English training for teams?",
@@ -29,7 +33,8 @@ const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "The first step is a free consultation or assessment. Simply fill in the contact form below or send a WhatsApp message and Sammy will get back to you within 24 hours to discuss your goals and how Atlas Wayfinder  can help.",
+    a: "The first step is a free consultation or assessment. Simply fill in the contact form below or send a WhatsApp message and Sammy will get back to you within 24 hours to discuss your goals and how Atlas Wayfinder
+                can help.",
   },
 ];
 

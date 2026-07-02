@@ -34,12 +34,11 @@ const navLinks = [
         <div className="flex items-center justify-between h-20">
 {/* Logo */}
 <a href="#" className="flex items-center gap-4">
-  <img
-    src={Logo}
-    alt="Atlas Wayfinder"
-    className="h-12 w-auto"
-  />
-
+<img
+  src={Logo}
+  alt="Atlas Wayfinder"
+  className="h-12 w-auto"
+/>
   <div>
     <div
       style={{
@@ -51,6 +50,7 @@ const navLinks = [
       }}
     >
       Atlas Wayfinder
+              
     </div>
 
     <div
