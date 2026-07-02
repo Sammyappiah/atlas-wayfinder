@@ -1,13 +1,11 @@
 import { motion } from "motion/react";
 
-const FOUNDER_IMG =
-  "/images/placeholder.jpg";
-
-const credentials = [
-  { label: "British Educator", value: "Academic guidance for global study" },
-  { label: "Therapist", value: "Confidence, resilience and mindset support" },
-  { label: "Specialist Learning Practitioner", value: "Tailored language development and strategy" },
-  { label: "International Education Consultant", value: "Pathways to universities and global careers" },
+const highlights = [
+  "British-led education specialists",
+  "10+ years international teaching experience",
+  "Specialist learning support expertise",
+  "IELTS and university preparation",
+  "Hundreds of learners supported internationally",
 ];
 
 export function AboutFounder() {
@@ -17,198 +15,106 @@ export function AboutFounder() {
       style={{ backgroundColor: "#0F172A" }}
     >
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-16">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
-          {/* Left — Image */}
+        <div className="relative">
+          <div
+            className="absolute left-0 top-1/2 -translate-y-1/2 select-none pointer-events-none"
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: "clamp(6rem, 12vw, 14rem)",
+              fontWeight: 300,
+              color: "rgba(200, 165, 90, 0.06)",
+              lineHeight: 1,
+              letterSpacing: "-0.05em",
+              zIndex: 0,
+            }}
+          >
+            ATLAS
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, x: -32 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            style={{ position: "relative", zIndex: 1 }}
           >
-            {/* Background text */}
-            <div
-              className="absolute -left-4 top-1/2 -translate-y-1/2 select-none pointer-events-none"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: "clamp(6rem, 12vw, 14rem)",
-                fontWeight: 300,
-                color: "rgba(200, 165, 90, 0.06)",
-                lineHeight: 1,
-                letterSpacing: "-0.05em",
-                zIndex: 0,
-              }}
-            >
-              ATLAS
-            </div>
-
-            <div className="relative" style={{ zIndex: 1 }}>
-              {/* Decorative lines */}
-              <div
-                className="absolute -top-4 -left-4 w-24 h-24"
-                style={{
-                  borderTop: "1px solid rgba(200, 165, 90, 0.4)",
-                  borderLeft: "1px solid rgba(200, 165, 90, 0.4)",
-                }}
-              />
-
-              <div
-                className="overflow-hidden"
-                style={{
-                  border: "1px solid rgba(200, 165, 90, 0.2)",
-                  padding: "10px",
-                }}
-              >
-                <div style={{ aspectRatio: "4/5", overflow: "hidden" }}>
-                  <img
-                    src={FOUNDER_IMG}
-                    alt="Sammy — British educator and international learning consultant"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to top, rgba(15,23,42,0.4) 0%, transparent 50%)",
-                    }}
-                  />
-                </div>
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div
+                  className="w-10 h-px"
+                  style={{ backgroundColor: "#C8A55A" }}
+                />
+                <span
+                  className="text-xs uppercase tracking-[0.22em]"
+                  style={{ color: "#C8A55A" }}
+                >
+                  Why Atlas Wayfinder?
+                </span>
               </div>
 
-              <div
-                className="absolute -bottom-4 -right-4 w-24 h-24"
-                style={{
-                  borderBottom: "1px solid rgba(200, 165, 90, 0.4)",
-                  borderRight: "1px solid rgba(200, 165, 90, 0.4)",
-                }}
-              />
-            </div>
-
-            {/* Stats card */}
-            <div
-              className="absolute bottom-8 -right-6 hidden lg:block p-5 min-w-[160px]"
-              style={{
-                backgroundColor: "#C8A55A",
-                zIndex: 2,
-              }}
-            >
-              <div
+              <h2
                 style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "2.25rem",
                   fontWeight: 400,
-                  color: "#0F172A",
-                  lineHeight: 1,
+                  color: "#FAF7F0",
+                  fontSize: "clamp(2rem, 3.2vw, 3rem)",
+                  lineHeight: 1.08,
                 }}
               >
-                10+
-              </div>
-              <div
-                className="text-xs mt-1 uppercase tracking-widest"
-                style={{ color: "#0F172A", opacity: 0.7, letterSpacing: "0.15em" }}
+                Why Atlas Wayfinder?
+              </h2>
+
+              <p
+                className="mt-6 mb-8 leading-relaxed"
+                style={{
+                  color: "rgba(250, 247, 240, 0.75)",
+                  fontSize: "1.0625rem",
+                  fontWeight: 400,
+                }}
               >
-                Years teaching
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right — Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 32 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-          >
-            <div className="flex items-center gap-4 mb-8">
-              <div
-                className="w-10 h-px"
-                style={{ backgroundColor: "#C8A55A" }}
-              />
-              <span
-                className="text-xs uppercase tracking-[0.22em]"
-                style={{ color: "#C8A55A" }}
-              >
-                Meet Your Specialist
-              </span>
-            </div>
-
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 400,
-                color: "#FAF7F0",
-                fontSize: "clamp(2.25rem, 3.5vw, 3.5rem)",
-                lineHeight: 1.1,
-              }}
-            >
-              British Expertise,
-              <br />
-              <em style={{ color: "#C8A55A" }}>International Vision</em>
-            </h2>
-
-            <p
-              className="mt-6 mb-8 leading-relaxed"
-              style={{
-                color: "rgba(250, 247, 240, 0.65)",
-                fontSize: "1.0625rem",
-                fontWeight: 400,
-              }}
-            >
-              Sammy combines British teaching expertise with specialist learning
-              practice to guide students and professionals toward international
-              study, career mobility and confident relocation.
-            </p>
-
-            <div
-              className="mb-8 space-y-4"
-              style={{ color: "rgba(250, 247, 240, 0.65)", fontSize: "1.0625rem", fontWeight: 400 }}
-            >
-              <p>
-                We help clients to:
+                Atlas Wayfinder helps ambitious students and professionals access international opportunities through expert English coaching, strategic guidance and personalised learning pathways. Our approach combines British educational standards with practical international experience to help clients achieve real-world outcomes.
               </p>
-              <ul className="grid gap-2 pl-5 list-disc">
-                <li>Clarify pathways to study abroad</li>
-                <li>Plan and achieve required IELTS outcomes</li>
-                <li>Develop professional English for global work</li>
-                <li>Prepare for university applications and interviews</li>
-                <li>Build confidence for international careers</li>
-              </ul>
             </div>
 
-            <p
-              className="mb-10 leading-relaxed"
-              style={{
-                color: "rgba(250, 247, 240, 0.65)",
-                fontSize: "1.0625rem",
-                fontWeight: 400,
-              }}
-            >
-              The approach is calm, evidence-led and grounded in expertise, with
-              a focus on long-term pathways rather than short-term teaching.
-            </p>
-
-            {/* Credentials grid */}
-            <div
-              className="grid grid-cols-2 gap-4 mb-10 pt-8"
-              style={{ borderTop: "1px solid rgba(200, 165, 90, 0.15)" }}
-            >
-              {credentials.map((c) => (
-                <div key={c.label}>
+            {/* Credibility cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
+              {highlights.map((h, idx) => (
+                <motion.div
+                  key={h}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.06 }}
+                  className="p-5"
+                  style={{
+                    background: idx === 0 ? "linear-gradient(180deg, rgba(200,165,90,0.06), transparent)" : "transparent",
+                    border: "1px solid rgba(250,247,240,0.04)",
+                    borderRadius: 8,
+                  }}
+                >
                   <div
-                    className="text-xs uppercase tracking-widest mb-1"
-                    style={{ color: "#C8A55A", letterSpacing: "0.15em" }}
+                    className="text-xs uppercase tracking-widest mb-2"
+                    style={{ color: "#C8A55A", letterSpacing: "0.12em" }}
                   >
-                    {c.label}
+                    {h.split(" ").slice(0,3).join(" ")}
                   </div>
-                  <div
-                    className="text-sm"
-                    style={{ color: "#FAF7F0", fontWeight: 500 }}
-                  >
-                    {c.value}
+                  <div className="text-sm" style={{ color: "#FAF7F0", fontWeight: 600 }}>
+                    {h}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
+
+            <p
+              className="mb-10 leading-relaxed max-w-2xl"
+              style={{
+                color: "rgba(250, 247, 240, 0.68)",
+                fontSize: "1rem",
+                fontWeight: 400,
+              }}
+            >
+              Whether your goal is university admission, career progression or greater confidence communicating internationally, Atlas Wayfinder provides structured guidance designed around your ambitions.
+            </p>
 
             <a
               href="#contact"
