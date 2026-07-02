@@ -13,11 +13,12 @@ export function Navigation() {
   }, []);
 
 const navLinks = [
-  "About",
+  "Home",
+  "Study",
+  "Work",
+  "Explore",
   "IELTS",
-  "Corporate",
   "Resources",
-  "YouTube",
   "Contact",
 ];
 
@@ -70,13 +71,7 @@ const navLinks = [
             {navLinks.map((link) => (
               <a
                 key={link}
-href={
-  link === "YouTube"
-    ? "https://youtube.com/@atlaswayfinderHQ"
-    : `#${link.toLowerCase()}`
-}
-target={link === "YouTube" ? "_blank" : undefined}
-rel={link === "YouTube" ? "noopener noreferrer" : undefined}
+                href={`#${link.toLowerCase()}`}
                 className="transition-colors duration-200 text-sm uppercase tracking-widest"
                 style={{
                   color: "rgba(250, 247, 240, 0.7)",
