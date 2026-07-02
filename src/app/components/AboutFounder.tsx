@@ -4,10 +4,10 @@ const FOUNDER_IMG =
   "/images/placeholder.jpg";
 
 const credentials = [
-  { label: "Qualification", value: "Founder & Director" },
-  { label: "Specialisation", value: "Specialist Learning Support" },
-  { label: "Background", value: "Therapist & Counsellor" },
-  { label: "Language", value: "Native British English" },
+  { label: "British Educator", value: "Academic guidance for global study" },
+  { label: "Therapist", value: "Confidence, resilience and mindset support" },
+  { label: "Specialist Learning Practitioner", value: "Tailored language development and strategy" },
+  { label: "International Education Consultant", value: "Pathways to universities and global careers" },
 ];
 
 export function AboutFounder() {
@@ -62,8 +62,7 @@ export function AboutFounder() {
                 <div style={{ aspectRatio: "4/5", overflow: "hidden" }}>
                   <img
                     src={FOUNDER_IMG}
-                    alt="Founder of Atlas Wayfinder
-              "
+                    alt="Sammy — British educator and international learning consultant"
                     className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                   />
                   <div
@@ -129,7 +128,7 @@ export function AboutFounder() {
                 className="text-xs uppercase tracking-[0.22em]"
                 style={{ color: "#C8A55A" }}
               >
-                Meet Your Coach
+                Meet Your Specialist
               </span>
             </div>
 
@@ -155,11 +154,27 @@ export function AboutFounder() {
                 fontWeight: 400,
               }}
             >
-              Sammy is a qualified British educator, therapist and Specialist
-              Learning Support Practitioner with over a decade of experience
-              helping students and professionals from around the world achieve
-              their English language goals.
+              Sammy is a British educator, therapist and Specialist Learning
+              Practitioner who advises students and professionals on international
+              study, career mobility and relocation.
             </p>
+
+            <div
+              className="mb-8 space-y-4"
+              style={{ color: "rgba(250, 247, 240, 0.65)", fontSize: "1.0625rem", fontWeight: 400 }}
+            >
+              <p>
+                Atlas Wayfinder helps clients to:
+              </p>
+              <ul className="grid gap-2 pl-5 list-disc">
+                <li>Study abroad with clear academic pathways</li>
+                <li>Pass IELTS with strategic preparation</li>
+                <li>Improve professional English for global work</li>
+                <li>Access universities and academic placements</li>
+                <li>Build international careers with confidence</li>
+                <li>Relocate with clarity and practical guidance</li>
+              </ul>
+            </div>
 
             <p
               className="mb-10 leading-relaxed"
@@ -169,10 +184,8 @@ export function AboutFounder() {
                 fontWeight: 400,
               }}
             >
-              With a deep understanding of how people learn languages — and the
-              psychological barriers that hold them back — Sammy combines
-              academic rigour with genuine warmth to create transformative
-              results for every client.
+              The approach is calm, evidence-led and grounded in expertise, with
+              a focus on long-term pathways rather than short-term teaching.
             </p>
 
             {/* Credentials grid */}
