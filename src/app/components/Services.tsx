@@ -48,7 +48,7 @@ const services = [
 export function Services() {
   return (
     <section
-      id="ielts"
+      id="services"
       className="py-28 md:py-36"
       style={{ backgroundColor: "#FAF7F0" }}
     >

@@ -16,6 +16,7 @@ const trustIndicators = [
 export function Hero() {
   return (
     <section
+      id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ backgroundColor: "#0F172A" }}
     >

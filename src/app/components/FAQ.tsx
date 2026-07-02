@@ -42,6 +42,7 @@ export function FAQ() {
 
   return (
     <section
+      id="faq"
       className="py-28 md:py-36"
       style={{ backgroundColor: "#0F172A" }}
     >

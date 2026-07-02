@@ -15,6 +15,19 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const handleNavClick = (e: any, hash: string) => {
+    e.preventDefault?.();
+    const id = hash.startsWith("#") ? hash.slice(1) : hash;
+    const el = document.getElementById(id);
+    if (el) {
+      const nav = document.querySelector("nav");
+      const offset = (nav?.clientHeight ?? 80) + 12;
+      const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
@@ -32,7 +45,7 @@ export function Navigation() {
     >
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-16">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-3">
+          <a href="#home" className="flex items-center gap-3" onClick={(e) => handleNavClick(e, "#home")}>
             <img src={Logo} alt="Atlas Wayfinder" className="h-12 w-auto" />
             <div>
               <div
@@ -77,6 +90,7 @@ export function Navigation() {
                       ((e.target as HTMLElement).style.color =
                         "rgba(250, 247, 240, 0.75)")
                     }
+                    onClick={(e) => handleNavClick(e, `#${link.toLowerCase()}`)}
                   >
                     {link}
                   </a>
@@ -135,7 +149,7 @@ export function Navigation() {
                       letterSpacing: "0.12em",
                       fontWeight: 500,
                     }}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => handleNavClick(e, `#${link.toLowerCase()}`)}
                   >
                     {link}
                   </a>
