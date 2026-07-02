@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, FormEvent, CSSProperties } from "react";
+import { SITE } from "../../config/site";
 
 export function Contact() {
   const [form, setForm] = useState({
@@ -10,12 +11,12 @@ export function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
   };
 
-  const inputStyle: React.CSSProperties = {
+  const inputStyle: CSSProperties = {
     backgroundColor: "rgba(250, 247, 240, 0.04)",
     border: "1px solid rgba(200, 165, 90, 0.2)",
     color: "#FAF7F0",
@@ -28,7 +29,7 @@ export function Contact() {
     transition: "border-color 0.2s",
   };
 
-  const labelStyle: React.CSSProperties = {
+  const labelStyle: CSSProperties = {
     display: "block",
     fontSize: "0.6875rem",
     textTransform: "uppercase",
@@ -58,7 +59,7 @@ export function Contact() {
                 className="text-xs uppercase tracking-[0.22em]"
                 style={{ color: "#C8A55A" }}
               >
-                Get in Touch
+                Book a Consultation
               </span>
             </div>
 
@@ -71,18 +72,17 @@ export function Contact() {
                 fontSize: "clamp(2rem, 3vw, 3rem)",
               }}
             >
-              Begin Your
+              Every journey begins with
               <br />
-              <em style={{ color: "#C8A55A" }}>Journey Today</em>
+              <em style={{ color: "#C8A55A" }}>clarity on your goals</em>
             </h2>
 
             <p
               className="leading-relaxed mb-12"
               style={{ color: "#6B7280", fontSize: "1.0625rem", fontWeight: 400, maxWidth: "440px" }}
             >
-              Book your free consultation or take a free assessment. Sammy will
-              respond within 24 hours to discuss your goals and how Atlas
-              English can help you achieve them.
+              Schedule a strategic consultation to define your goals and the most
+              suitable pathway for study, work or relocation abroad.
             </p>
 
             {/* Contact details */}
@@ -120,7 +120,7 @@ export function Contact() {
                     className="text-xs uppercase tracking-widest mb-1 group-hover:text-amber-400 transition-colors"
                     style={{ color: "#C8A55A", letterSpacing: "0.15em" }}
                   >
-                    WhatsApp
+                    Direct consultant access
                   </div>
                   <div
                     className="text-sm group-hover:text-white transition-colors"
@@ -133,7 +133,7 @@ export function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:${SITE.email}"
+                href={`mailto:${SITE.email}`}
                 className="group flex items-center gap-5 p-5 transition-all duration-300"
                 style={{
                   border: "1px solid rgba(15, 23, 42, 0.1)",
@@ -168,7 +168,7 @@ export function Contact() {
                     className="text-sm group-hover:text-white transition-colors"
                     style={{ color: "#0F172A", fontWeight: 500 }}
                   >
-                    ${SITE.email}
+                    {SITE.email}
                   </div>
                 </div>
               </a>
@@ -326,7 +326,7 @@ export function Contact() {
                     (e.currentTarget as HTMLElement).style.backgroundColor = "#C8A55A";
                   }}
                 >
-                  Send Message
+                  Request Consultation
                 </button>
               </form>
             )}
