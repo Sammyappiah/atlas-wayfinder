@@ -8,10 +8,10 @@ const assessments = [
         <path d="M12 18l4 4 8-8" stroke="#C8A55A" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: "Free IELTS Score Assessment",
+    title: "IELTS Readiness Assessment",
     description:
-      "Discover your current IELTS level and receive a personalised roadmap to your target band score.",
-    cta: "Get My Assessment",
+      "Evaluate your current English level and estimate the pathway to the required IELTS score.",
+    cta: "Begin assessment",
     duration: "20 minutes",
   },
   {
@@ -21,11 +21,11 @@ const assessments = [
         <path d="M12 15h12M12 19h8M12 23h6" stroke="#C8A55A" strokeWidth="1" strokeLinecap="round" />
       </svg>
     ),
-    title: "Free English Level Assessment",
+    title: "Study Abroad Readiness",
     description:
-      "Identify your current English level across speaking, writing, reading and listening.",
-    cta: "Check My Level",
-    duration: "15 minutes",
+      "Assess language, academic preparation and confidence for studying internationally.",
+    cta: "Begin assessment",
+    duration: "25 minutes",
   },
   {
     icon: (
@@ -33,11 +33,11 @@ const assessments = [
         <path d="M18 6l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="#C8A55A" strokeWidth="1.2" strokeLinejoin="round" />
       </svg>
     ),
-    title: "Study Abroad Readiness Check",
+    title: "Professional English Assessment",
     description:
-      "Assess your English readiness for international study and receive targeted preparation advice.",
-    cta: "Check Readiness",
-    duration: "25 minutes",
+      "Evaluate communication skills for interviews, presentations and international workplaces.",
+    cta: "Begin assessment",
+    duration: "20 minutes",
   },
   {
     icon: (
@@ -47,10 +47,10 @@ const assessments = [
         <path d="M18 17v4M16 19h4" stroke="#C8A55A" strokeWidth="1" strokeLinecap="round" />
       </svg>
     ),
-    title: "Professional English Audit",
+    title: "Learning Profile Assessment",
     description:
-      "Evaluate your business English capabilities and identify the gaps holding back your international career.",
-    cta: "Request Audit",
+      "Identify learning strengths, challenges and evidence-based strategies for dyslexia, ADHD and other differences.",
+    cta: "Begin assessment",
     duration: "30 minutes",
   },
 ];
@@ -71,7 +71,7 @@ export function Assessments() {
               className="text-xs uppercase tracking-[0.22em]"
               style={{ color: "#C8A55A" }}
             >
-              No Commitment Required
+              Assessment First
             </span>
             <div className="w-10 h-px" style={{ backgroundColor: "#C8A55A" }} />
           </div>
@@ -82,14 +82,16 @@ export function Assessments() {
               color: "#FAF7F0",
             }}
           >
-            Free Assessments
+            Choose the right pathway
+            <br />
+            <em>by understanding your current position</em>
           </h2>
           <p
             className="mt-4 leading-relaxed"
             style={{ color: "rgba(250, 247, 240, 0.6)", fontSize: "1.0625rem" }}
           >
-            Begin your journey with a complimentary assessment. Discover exactly
-            where you stand and what it will take to reach your goals.
+            Identifying your readiness first ensures the programme you select is
+            the one that advances your study, work and relocation plans.
           </p>
         </div>
 
@@ -186,6 +188,28 @@ export function Assessments() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p
+            className="max-w-2xl leading-relaxed text-sm"
+            style={{ color: "rgba(250, 247, 240, 0.7)", fontWeight: 400 }}
+          >
+            Start with an assessment so you can choose a programme that aligns
+            with your current readiness and long-term international goals.
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-widest transition-all duration-300"
+            style={{
+              backgroundColor: "#C8A55A",
+              color: "#0F172A",
+              letterSpacing: "0.12em",
+              fontWeight: 600,
+            }}
+          >
+            Start with an assessment
+          </a>
         </div>
       </div>
     </section>
