@@ -1,25 +1,31 @@
+#!/bin/bash
+
 echo "========== BUILD =========="
-npm run build
+npm run build >/dev/null && echo "✅ Build OK" || echo "❌ Build FAILED"
 
 echo
-echo "========== OLD BRANDING =========="
-grep -RniE "Atlas English|World Bound|Atlas Finder" src || echo "✓ Clean"
+echo "========== BRAND =========="
+grep -RniE "Atlas English|World Bound|Atlas Finder|Premium Education" src || echo "✅ Clean"
 
 echo
-echo "========== EXTERNAL IMAGES =========="
-grep -RniE "unsplash|pexels|pixabay" src || echo "✓ Clean"
+echo "========== EMAIL =========="
+grep -RniE "appiahcounselling|@gmail|@hotmail|@yahoo" src || echo "✅ Clean"
 
 echo
 echo "========== PLACEHOLDERS =========="
-grep -RniE "Lorem|placeholder|Coming Soon|example|demo|dummy" src || echo "✓ Clean"
+grep -RniE "Lorem|dummy|example|placeholder.jpg|Coming Soon" src || echo "✅ Clean"
+
+echo
+echo "========== STOCK IMAGES =========="
+grep -RniE "unsplash|pexels|pixabay" src || echo "✅ Clean"
 
 echo
 echo "========== SOCIAL =========="
-grep -RniE "youtube|facebook|instagram|linkedin|whatsapp" src
+grep -RniE "instagram.com|facebook.com|linkedin.com" src || echo "✅ Clean"
 
 echo
-echo "========== TAGLINE =========="
-grep -R "Study • Work • Explore" src
+echo "========== TODO =========="
+grep -Rni "TODO" src || echo "✅ None"
 
 echo
-echo "========== COMPLETE =========="
+echo "========== FINISHED =========="
