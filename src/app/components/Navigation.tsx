@@ -2,6 +2,15 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../../assets/logo.png";
 
+const navLinks = [
+  "Home",
+  "Services",
+  "About",
+  "Assessments",
+  "FAQ",
+  "Contact",
+];
+
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -12,83 +21,68 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-const navLinks = [
-  "Home",
-  "Study",
-  "Work",
-  "Explore",
-  "IELTS",
-  "Resources",
-  "Contact",
-];
-
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        backgroundColor: scrolled ? "rgba(15, 23, 42, 0.97)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
+        backgroundColor: scrolled ? "rgba(15, 23, 42, 0.88)" : "transparent",
+        backdropFilter: scrolled ? "blur(14px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(200, 165, 90, 0.15)" : "none",
       }}
     >
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-16">
         <div className="flex items-center justify-between h-20">
-{/* Logo */}
-<a href="#" className="flex items-center gap-4">
-<img
-  src={Logo}
-  alt="Atlas Wayfinder"
-  className="h-12 w-auto"
-/>
-  <div>
-    <div
-      style={{
-        color: "#FAF7F0",
-        fontWeight: 700,
-        letterSpacing: "0.12em",
-        textTransform: "uppercase",
-        fontSize: "0.9rem",
-      }}
-    >
-      Atlas Wayfinder
-              
-    </div>
-
-    <div
-      style={{
-        color: "#C8A55A",
-        fontSize: "0.7rem",
-        letterSpacing: "0.18em",
-        textTransform: "uppercase",
-      }}
-    >
-      English That Opens International Doors
-    </div>
-  </div>
-</a>
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="transition-colors duration-200 text-sm uppercase tracking-widest"
+          <a href="#" className="flex items-center gap-3">
+            <img src={Logo} alt="Atlas Wayfinder" className="h-12 w-auto" />
+            <div>
+              <div
                 style={{
-                  color: "rgba(250, 247, 240, 0.7)",
+                  color: "#FAF7F0",
+                  fontWeight: 700,
                   letterSpacing: "0.12em",
-                  fontWeight: 500,
+                  textTransform: "uppercase",
+                  fontSize: "0.9rem",
                 }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = "#C8A55A")
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color =
-                    "rgba(250, 247, 240, 0.7)")
-                }
               >
-                {link}
-              </a>
-            ))}
+                Atlas Wayfinder
+              </div>
+              <div
+                style={{
+                  color: "#C8A55A",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Study • Work • Explore Abroad
+              </div>
+            </div>
+          </a>
+
+          <div className="hidden lg:flex items-center gap-10">
+            <ul className="flex items-center gap-10" aria-label="Primary navigation">
+              {navLinks.map((link) => (
+                <li key={link}>
+                  <a
+                    href={`#${link.toLowerCase()}`}
+                    className="transition-colors duration-200 text-sm uppercase tracking-widest"
+                    style={{
+                      color: "rgba(250, 247, 240, 0.75)",
+                      fontWeight: 500,
+                    }}
+                    onMouseEnter={(e) =>
+                      ((e.target as HTMLElement).style.color = "#C8A55A")
+                    }
+                    onMouseLeave={(e) =>
+                      ((e.target as HTMLElement).style.color =
+                        "rgba(250, 247, 240, 0.75)")
+                    }
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
             <a
               href="#contact"
               className="px-6 py-2.5 text-sm uppercase tracking-widest transition-all duration-300"
@@ -99,62 +93,68 @@ const navLinks = [
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = "#D4B472";
+                (e.currentTarget as HTMLElement).style.backgroundColor =
+                  "#D4B472";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = "#C8A55A";
+                (e.currentTarget as HTMLElement).style.backgroundColor =
+                  "#C8A55A";
               }}
             >
-              Book Consultation
+              Book Free Consultation
             </a>
           </div>
 
-          {/* Mobile toggle */}
           <button
+            type="button"
             className="lg:hidden p-2"
             style={{ color: "#FAF7F0" }}
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => setMobileOpen((open) => !open)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileOpen && (
           <div
+            id="mobile-menu"
             className="lg:hidden py-6 border-t"
             style={{ borderColor: "rgba(200, 165, 90, 0.2)" }}
           >
-            <div className="flex flex-col gap-5">
+            <ul className="flex flex-col gap-5" aria-label="Mobile navigation">
               {navLinks.map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="text-sm uppercase tracking-widest"
-                  style={{
-                    color: "rgba(250, 247, 240, 0.8)",
-                    letterSpacing: "0.12em",
-                    fontWeight: 500,
-                  }}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link}
-                </a>
+                <li key={link}>
+                  <a
+                    href={`#${link.toLowerCase()}`}
+                    className="text-sm uppercase tracking-widest"
+                    style={{
+                      color: "rgba(250, 247, 240, 0.85)",
+                      letterSpacing: "0.12em",
+                      fontWeight: 500,
+                    }}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link}
+                  </a>
+                </li>
               ))}
-              <a
-                href="#contact"
-                className="px-6 py-3 text-center text-sm uppercase tracking-widest mt-2"
-                style={{
-                  backgroundColor: "#C8A55A",
-                  color: "#0F172A",
-                  letterSpacing: "0.12em",
-                  fontWeight: 600,
-                }}
-                onClick={() => setMobileOpen(false)}
-              >
-                Book Consultation
-              </a>
-            </div>
+            </ul>
+            <a
+              href="#contact"
+              className="mt-4 inline-flex w-full justify-center px-6 py-3 text-center text-sm uppercase tracking-widest"
+              style={{
+                backgroundColor: "#C8A55A",
+                color: "#0F172A",
+                letterSpacing: "0.12em",
+                fontWeight: 600,
+              }}
+              onClick={() => setMobileOpen(false)}
+            >
+              Book Free Consultation
+            </a>
           </div>
         )}
       </div>
